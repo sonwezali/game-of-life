@@ -62,6 +62,7 @@ void compute_next_grid() {
 }
 
 void init_grid() {
+    srand(time(NULL));
     for (size_t y = 0; y < HEIGHT; y++) {
         for (size_t x = 0; x < WIDTH; x++) {
             grid[y][x] = random_state();
@@ -89,7 +90,7 @@ int main() {
     init_grid();
 
     while (1) {
-        delay(250);
+        delay(125);
         compute_next_grid();
         display_grid();
     }
